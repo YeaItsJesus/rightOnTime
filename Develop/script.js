@@ -2,6 +2,14 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 $(function () {
+  
+  //Sets the current date with in the same format as the mock up
+//TODO add ordinal to day of month
+  let todaysDate = dayjs().format('dddd, MMMM, D')
+  $('#currentDay').text(todaysDate)
+
+
+ 
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
@@ -46,3 +54,4 @@ $(function () {
 // THEN the text for that event is saved in local storage
 // WHEN I refresh the page
 // THEN the saved events persist
+
