@@ -3,9 +3,9 @@
 // in the html.
 $(function () {
   
-  //Sets the current date with in the same format as the mock up
+  //Sets the current date on top of page
 //TODO add ordinal to day of month
-  let todaysDate = dayjs().format('dddd, MMMM, D')
+let todaysDate = dayjs().format('dddd, MMMM, D')
   $('#currentDay').text(todaysDate)
 
 
@@ -32,7 +32,7 @@ $(function () {
 
 // Acceptance Criteria 
 
-
+//DONE
 // GIVEN I am using a daily planner to create a schedule
 // WHEN I open the planner
 // THEN the current day is displayed at the top of the calendar
