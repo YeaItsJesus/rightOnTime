@@ -1,12 +1,145 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
+
 $(function () {
   
   //Sets the current date on top of page
 //TODO add ordinal to day of month
 let todaysDate = dayjs().format('dddd, MMMM, D')
-  $('#currentDay').text(todaysDate)
+  $('#currentDay').text(todaysDate);
+
+  
+  let currentTime = dayjs().hour();
+
+  //Interval refreshes and runs code every minute
+timeIsKey()
+setInterval(function() {
+  timeIsKey();
+}, 60000 );
+
+  function timeIsKey () {
+    //contains all text areas
+let thisText = $(".description");
+
+
+$.each ( thisText, function (indexes, values) {
+
+  let workHours = $(this).attr("id")
+  
+  if (currentTime > workHours) {
+    $(values).addClass("past")
+    }
+
+    else if (currentTime == workHours) {
+      $(values).addClass("present")
+    }
+    else if ( currentTime < workHours) {
+      $(values).addClass("future")
+    }
+
+
+
+})
+
+}
+
+
+
+
+
+
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  // let timeBlock = $(".time-block");
+  //Loop
+  // $(timeBlock).each(function() {
+  //   let timeBlockHour = parseInt($
+  //     (this).attr('id').split('-')[1]);
+
+
+  //     if (timeBlockHour < currentTime) {
+  //       $(this).addClass("past");
+  //     }
+
+  //     else if ( timeBlockHour === currentTime ) {
+  //       $(this).addClass("present");
+  //     }
+  //     else {
+  //       $(this).addClass("future");
+  //     }
+
+  // })
+
+
+
+
+  
+
+  
+  
 
 
  
